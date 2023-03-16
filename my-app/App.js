@@ -32,27 +32,29 @@ const styles = StyleSheet.create({
   scroll11: { backgroundColor: "white" },
   v0: {
     backgroundColor: "white",
-    width: 250,
-    height: 100,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
   },
   v1: {
     backgroundColor: "aqua",
-    width: 250,
+    width: 150,
     height: 100,
   },
   v2: {
     backgroundColor: "red",
-    width: 250,
+    width: 150,
     height: 100,
   },
   v3: {
     backgroundColor: "yellow",
-    width: 250,
+    width: 150,
     height: 100,
   },
   v4: {
     backgroundColor: "purple",
-    width: 250,
+    width: 150,
     height: 100,
   },
 });
