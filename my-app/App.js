@@ -1,4 +1,3 @@
-import { ScrollView } from "react-native";
 import {
   SafeAreaView,
   StyleSheet,
@@ -6,7 +5,10 @@ import {
   View,
   StatusBar,
   Platform,
+  Image,
+  ScrollView,
 } from "react-native";
+import { AntDesign, Ionicons } from "@expo/vector-icons";
 
 export default function App() {
   return (
@@ -20,22 +22,24 @@ export default function App() {
         <View style={styles.v0}>
           <View style={styles.v1}>
             <Text style={styles.t1}>Товч ном</Text>
+            <AntDesign name="caretdown" size={32} color="white" />
           </View>
           <View style={styles.v2}>
-            <Text style={styles.t2}>Товч ном</Text>
+            <Text style={styles.t2}>Цахим ном</Text>
           </View>
           <View style={styles.v3}>
-            <Text style={styles.t3}>Товч ном</Text>
+            <Text style={styles.t3}>Аудио ном</Text>
+            <AntDesign name="caretright" />
           </View>
           <View style={styles.v4}>
-            <Text style={styles.t4}>Товч ном</Text>
+            <Text style={styles.t4}>Подкаст</Text>
           </View>
         </View>
 
         <View style={styles.nomv0}>
-          <Text style={styles.ehniiitext}>kiki jiji</Text>
-          <Text style={styles.hoyrdhtext}>ontsloh</Text>
-          <Image source={require("")}
+          <Text style={styles.ehniiitext}> Кики болон Жижитэй хамт</Text>
+          <Text style={styles.hoyrdhtext}>Энэ долоо хоногийн онцлох</Text>
+          <Image source={require("./assets/neg.png")} style={styles.img} />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -54,7 +58,7 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   v0: {
-    backgroundColor: "black",
+    backgroundColor: "grey",
     flexDirection: "row",
     flexWrap: "wrap",
     height: 270,
@@ -113,23 +117,30 @@ const styles = StyleSheet.create({
   },
 
   nomv0: {
-    backgroundColor: "black",
+    backgroundColor: "grey",
     height: 500,
     width: 380,
     borderRadius: 25,
     marginHorizontal: 15,
+    overflow: "hidden",
   },
 
   ehniiitext: {
     textTransform: "uppercase",
-    fontSize: 20,
+    fontSize: 15,
     marginLeft: 15,
     color: "white",
+    marginTop: 15,
   },
   hoyrdhtext: {
     fontWeight: "bold",
     marginLeft: 15,
     color: "white",
     fontSize: 25,
+  },
+  img: {
+    resizeMode: "stretch",
+    flex: 1,
+    width: "100%",
   },
 });
