@@ -7,6 +7,7 @@ import {
   Platform,
   Image,
   ScrollView,
+  Pressable,
 } from "react-native";
 import { AntDesign, Entypo, FontAwesome } from "@expo/vector-icons";
 
@@ -59,6 +60,9 @@ export default function App() {
         </View>
 
         <View style={styles.nomv0}>
+            <Pressable onPress={()=> {
+                navigation.nav
+            }}
           <Text style={styles.ehniiitext}> Кики болон Жижитэй хамт</Text>
           <Text style={styles.hoyrdhtext}>Энэ долоо хоногийн онцлох</Text>
           <Image source={require("./assets/neg.png")} style={styles.img} />
