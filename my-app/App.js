@@ -8,7 +8,7 @@ import {
   Image,
   ScrollView,
 } from "react-native";
-import { AntDesign, Ionicons } from "@expo/vector-icons";
+import { AntDesign, Entypo, FontAwesome } from "@expo/vector-icons";
 
 export default function App() {
   return (
@@ -22,17 +22,24 @@ export default function App() {
         <View style={styles.v0}>
           <View style={styles.v1}>
             <Text style={styles.t1}>Товч ном</Text>
-            <AntDesign name="caretdown" size={32} color="white" />
+            <AntDesign
+              name="caretdown"
+              size={32}
+              color="white"
+              style={styles.i1}
+            />
           </View>
           <View style={styles.v2}>
             <Text style={styles.t2}>Цахим ном</Text>
+            <Entypo name="controller-stop" size={32} color="white" />
           </View>
           <View style={styles.v3}>
             <Text style={styles.t3}>Аудио ном</Text>
-            <AntDesign name="caretright" />
+            <AntDesign name="caretright" size={32} color="white" />
           </View>
           <View style={styles.v4}>
             <Text style={styles.t4}>Подкаст</Text>
+            <FontAwesome name="music" size={32} color="white" />
           </View>
         </View>
 
@@ -68,28 +75,28 @@ const styles = StyleSheet.create({
     alignContent: "center",
   },
   v1: {
-    backgroundColor: "aqua",
+    backgroundColor: "plum",
     width: 150,
     height: 100,
     margin: 10,
     borderRadius: 15,
   },
   v2: {
-    backgroundColor: "red",
+    backgroundColor: "violet",
     width: 150,
     height: 100,
     margin: 10,
     borderRadius: 15,
   },
   v3: {
-    backgroundColor: "yellow",
+    backgroundColor: "beige",
     width: 150,
     height: 100,
     margin: 10,
     borderRadius: 15,
   },
   v4: {
-    backgroundColor: "purple",
+    backgroundColor: "#ffb6c1",
     width: 150,
     height: 100,
     margin: 10,
