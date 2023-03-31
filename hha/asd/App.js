@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  v0: { backgroundColor: "beige", flexDirection: "row" },
+  v0: { backgroundColor: "beige" },
 
   detail1: {
     width: 20,
