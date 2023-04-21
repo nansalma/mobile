@@ -1,20 +1,44 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  TextInput,
+  onChangeNumber,
+} from "react-native";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import Feather from "@expo/vector-icons/Feather";
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scview}>
         <View style={styles.view0}>
-          <View style={styles.i1}>
-            <SimpleLineIcons name="basket" size={32} color="white" />
-          </View>
-          <View style={styles.i2}>
-            <AntDesign name="gift" size={32} color="white" />
+          <View style={styles.twoicon}>
+            <View style={styles.i1}>
+              <SimpleLineIcons name="basket" size={32} color="white" />
+            </View>
+            <View style={styles.i2}>
+              <AntDesign name="gift" size={32} color="white" />
+            </View>
           </View>
         </View>
-        <View style={styles.view1}></View>
+
+        <View style={styles.code}>
+          <TextInput
+            style={styles.input}
+            placeholder="Код оруулах"
+            onChangeText={onChangeNumber}
+            keyboardType="default"
+            maxLength={9}
+          />
+
+          <View style={styles.isend}>
+            <Feather name="send" size={32} color="black" />
+          </View>
+        </View>
       </ScrollView>
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -26,25 +50,45 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
   },
-  scview: {},
+  scview: { backgroundColor: "white" },
   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   view0: {
-    width: 500,
-    height: 80,
+    width: 600,
+    height: 130,
     backgroundColor: "red",
-
-    shadowColor: "#000000",
+    flexDirection: "column",
   },
+  twoicon: { flexDirection: "column", marginTop: 20, alignItems: "flex-start" },
+
   i1: {
     marginLeft: 300,
     marginTop: 30,
-    width: 40,
-    height: 30,
   },
   i2: {
     marginLeft: 350,
     marginTop: -27,
-    width: 30,
-    height: 30,
+  },
+  code: {
+    backgroundColor: "red",
+
+    height: 80,
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+  },
+
+  input: {
+    borderRadius: 10,
+    backgroundColor: `#f8f8ff`,
+    width: 300,
+    height: 50,
+    paddingLeft: 20,
+    marginTop: 20,
+  },
+  isend: {
+    backgroundColor: "grey",
+    marginLeft: 250,
+    marginBottom: 20,
+    marginTop: 0,
   },
 });
