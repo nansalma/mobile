@@ -7,6 +7,7 @@ import {
   ScrollView,
   TextInput,
   onChangeNumber,
+  Image,
 } from "react-native";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
@@ -34,11 +35,16 @@ export default function App() {
             keyboardType="default"
             maxLength={9}
           />
-
           <View style={styles.isend}>
-            <Feather name="send" size={32} color="black" />
+            <Feather name="send" size={32} color="red" />
           </View>
         </View>
+        {/* <ScrollView horizontal={true}> */}
+        <View style={styles.zuragniiview}>
+          <Image style={styles.zurag} source={require("./assets/zurag1.png")} />
+          <Image style={styles.zurag} source={require("./assets/zurag1.png")} />
+        </View>
+        {/* </ScrollView> */}
       </ScrollView>
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -86,9 +92,23 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   isend: {
-    backgroundColor: "grey",
+    backgroundColor: `#dcdcdc`,
     marginLeft: 250,
     marginBottom: 20,
-    marginTop: 0,
+    marginTop: -50,
+    height: 50,
+    borderRadius: 10,
+    width: 50,
+    padding: 9,
   },
+
+  zurag: {
+    backgroundColor: "pink",
+    resizeMode: "contain",
+    flex: 1,
+    width: "100%",
+    height: 700,
+    marginTop: 10,
+  },
+  zuragniiview: { height: 300, flexDirection: "column" },
 });
