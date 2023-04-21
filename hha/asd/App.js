@@ -1,33 +1,20 @@
-import { View, Text, SafeAreaView, ScrollView, StyleSheet } from "react-native";
-import React from "react";
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default function nuur2() {
+const Stack = createNativeStackNavigator();
+
+const MyStack = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView>
-        <View style={styles.v0}>
-          <View style={styles.detail1}></View>
-          <View style={styles.detail2}></View>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: "Welcome" }}
+        />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-
-  v0: { backgroundColor: "beige" },
-
-  detail1: {
-    width: 20,
-    height: 20,
-    backgroundColor: "gray",
-  },
-  detail2: {
-    width: 20,
-    height: 20,
-    backgroundColor: "gray",
-  },
-});
+};
