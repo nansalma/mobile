@@ -48,7 +48,17 @@ export default function App() {
         </View>
 
         <View style={styles.hutulbur}>
-          <Text>Хөтөлбөр</Text>
+          <Text style={styles.ug}>Хөтөлбөр</Text>
+        </View>
+
+        <View style={styles.hutulburzurag}>
+          <Image
+            style={styles.sprite}
+            source={require("./assets/sprite.png")}
+          />
+          <View style={styles.doortailbar}>
+            <Text style={styles.dtailbarst}> Sprite x M Music</Text>
+          </View>
         </View>
       </ScrollView>
       <StatusBar style="auto" />
@@ -124,6 +134,28 @@ const styles = StyleSheet.create({
   hutulbur: {
     fontSize: 15,
     marginLeft: 10,
-    color: "gainsboro",
+  },
+  ug: {
+    color: `#d3d3d3`,
+  },
+  sprite: {
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    width: "85%",
+    flex: 1,
+    resizeMode: "contain",
+    height: 200,
+    margin: 30,
+  },
+  hutulburzurag: {
+    width: 420,
+    height: 200,
+    backgroundColor: "red ",
+  },
+  dtailbarst: {
+    color: `#d3d3d3`,
+  },
+  doortailbar: {
+    marginLeft: 20,
   },
 });
