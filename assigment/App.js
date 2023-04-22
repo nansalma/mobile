@@ -39,12 +39,17 @@ export default function App() {
             <Feather name="send" size={32} color="red" />
           </View>
         </View>
-        {/* <ScrollView horizontal={true}> */}
+
         <View style={styles.zuragniiview}>
+          {/* <ScrollView horizontal={true}> */}
           <Image style={styles.zurag} source={require("./assets/zurag1.png")} />
           <Image style={styles.zurag} source={require("./assets/zurag1.png")} />
+          {/* </ScrollView> */}
         </View>
-        {/* </ScrollView> */}
+
+        <View style={styles.hutulbur}>
+          <Text>Хөтөлбөр</Text>
+        </View>
       </ScrollView>
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -103,12 +108,22 @@ const styles = StyleSheet.create({
   },
 
   zurag: {
-    backgroundColor: "pink",
-    resizeMode: "contain",
+    resizeMode: "cover",
     flex: 1,
     width: "100%",
-    height: 700,
+    height: 200,
     marginTop: 10,
+    flexDirection: "column",
   },
-  zuragniiview: { height: 300, flexDirection: "column" },
+  zuragniiview: {
+    width: 400,
+
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+  hutulbur: {
+    fontSize: 15,
+    marginLeft: 10,
+    color: "gainsboro",
+  },
 });
