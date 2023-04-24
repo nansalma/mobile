@@ -52,13 +52,15 @@ export default function App() {
         </View>
 
         <View style={styles.hutulburzurag}>
-          <Image
-            style={styles.sprite}
-            source={require("./assets/sprite.png")}
-          />
-          <View style={styles.doortailbar}>
-            <Text style={styles.dtailbarst}> Sprite x M Music</Text>
+          <View style={styles.spriteview}>
+            <Image
+              style={styles.sprite}
+              source={require("./assets/sprite.png")}
+            />
           </View>
+        </View>
+        <View style={styles.doortailbar}>
+          <Text style={styles.dtailbarst}> Sprite x M Music</Text>
         </View>
       </ScrollView>
       <StatusBar style="auto" />
@@ -127,7 +129,6 @@ const styles = StyleSheet.create({
   },
   zuragniiview: {
     width: 400,
-
     flexDirection: "row",
     flexWrap: "wrap",
   },
@@ -141,21 +142,30 @@ const styles = StyleSheet.create({
   sprite: {
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
-    width: "85%",
+    width: "100%",
     flex: 1,
-    resizeMode: "contain",
     height: 200,
-    margin: 30,
+    resizeMode: "contain",
   },
   hutulburzurag: {
-    width: 420,
-    height: 200,
-    backgroundColor: "red ",
+    width: 370,
+    height: 300,
+    backgroundColor: "black",
+    borderWidth: 3,
+    margin: 20,
+    marginRight: 20,
+
+    borderRadius: 10,
   },
   dtailbarst: {
     color: `#d3d3d3`,
   },
   doortailbar: {
     marginLeft: 20,
+  },
+  spriteview: {
+    width: 365,
+    height: 250,
+    borderRadius: 10,
   },
 });
