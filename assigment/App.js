@@ -39,14 +39,18 @@ export default function App() {
             <Feather name="send" size={32} color="red" />
           </View>
         </View>
-
-        <View style={styles.zuragniiview}>
-          {/* <ScrollView horizontal={true}> */}
-          <Image style={styles.zurag} source={require("./assets/zurag1.png")} />
-          <Image style={styles.zurag} source={require("./assets/zurag1.png")} />
-          {/* </ScrollView> */}
-        </View>
-
+        <ScrollView horizontal={true}>
+          <View style={styles.zuragniiview}>
+            <Image
+              style={styles.zurag}
+              source={require("./assets/zurag1.png")}
+            />
+            <Image
+              style={styles.zurag}
+              source={require("./assets/zurag1.png")}
+            />
+          </View>
+        </ScrollView>
         <View style={styles.hutulbur}>
           <Text style={styles.ug}>Хөтөлбөр</Text>
         </View>
@@ -57,10 +61,13 @@ export default function App() {
               style={styles.sprite}
               source={require("./assets/sprite.png")}
             />
+            <View style={styles.doortailbar}>
+              <Text style={styles.dtailbarst}> Sprite x M Music</Text>
+              <Text style={styles.baruuntailabr}>
+                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+              </Text>
+            </View>
           </View>
-        </View>
-        <View style={styles.doortailbar}>
-          <Text style={styles.dtailbarst}> Sprite x M Music</Text>
         </View>
       </ScrollView>
       <StatusBar style="auto" />
@@ -149,23 +156,32 @@ const styles = StyleSheet.create({
   },
   hutulburzurag: {
     width: 370,
-    height: 300,
+    height: 200,
     backgroundColor: "black",
     borderWidth: 3,
     margin: 20,
     marginRight: 20,
-
+    shadowColor: "black",
+    shadowOpacity: 20,
     borderRadius: 10,
+    shadowOffset: { width: 15, height: 15 },
   },
   dtailbarst: {
     color: `#d3d3d3`,
+    marginLeft: -15,
   },
   doortailbar: {
     marginLeft: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   spriteview: {
     width: 365,
-    height: 250,
+    height: 200,
     borderRadius: 10,
+  },
+  baruuntailabr: {
+    color: `#d3d3d3`,
+    textAlign: "right",
   },
 });
