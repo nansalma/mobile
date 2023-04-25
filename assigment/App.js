@@ -208,4 +208,8 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     borderRadius: 10,
   },
+  img: {
+    width: 80,
+    height: 90,
+  },
 });
