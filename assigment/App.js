@@ -43,11 +43,11 @@ export default function App() {
           <View style={styles.zuragniiview}>
             <Image
               style={styles.zurag}
-              source={require("./assets/zurag1.png")}
+              source={require("./source/images/zurag1.png")}
             />
             <Image
               style={styles.zurag}
-              source={require("./assets/zurag1.png")}
+              source={require("./source/images/zurag1.png")}
             />
           </View>
         </ScrollView>
@@ -59,7 +59,7 @@ export default function App() {
           <View style={styles.spriteview}>
             <Image
               style={styles.sprite}
-              source={require("./assets/sprite.png")}
+              source={require("./source/images/sprite.png")}
             />
             <View style={styles.doortailbar}>
               <Text style={styles.dtailbarst}> Sprite x M Music</Text>
@@ -68,6 +68,14 @@ export default function App() {
               </Text>
             </View>
           </View>
+        </View>
+
+        <View style={styles.beleg}>
+          <Text style={styles.belegnuudug}>Бэлэгнүүд</Text>
+        </View>
+
+        <View style={styles.belegzurag}>
+          <Image source={require("./source/images/beleg.png")}></Image>
         </View>
       </ScrollView>
       <StatusBar style="auto" />
@@ -81,6 +89,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   scview: { backgroundColor: "white" },
+
   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   view0: {
     width: 600,
@@ -127,17 +136,19 @@ const styles = StyleSheet.create({
   },
 
   zurag: {
-    resizeMode: "cover",
+    resizeMode: "contain",
     flex: 1,
     width: "100%",
-    height: 200,
+    height: 300,
     marginTop: 10,
     flexDirection: "column",
   },
   zuragniiview: {
-    width: 400,
+    width: 900,
     flexDirection: "row",
+    flex: 1,
     flexWrap: "wrap",
+    resizeMode: "cover",
   },
   hutulbur: {
     fontSize: 15,
@@ -145,6 +156,7 @@ const styles = StyleSheet.create({
   },
   ug: {
     color: `#d3d3d3`,
+    marginLeft: 13,
   },
   sprite: {
     borderTopLeftRadius: 10,
@@ -160,6 +172,7 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     borderWidth: 3,
     margin: 20,
+    marginTop: -2,
     marginRight: 20,
     shadowColor: "black",
     shadowOpacity: 20,
@@ -183,5 +196,16 @@ const styles = StyleSheet.create({
   baruuntailabr: {
     color: `#d3d3d3`,
     textAlign: "right",
+  },
+  belegnuudug: {
+    color: `#d3d3d3`,
+    marginLeft: 20,
+  },
+  belegzurag: {
+    width: 90,
+    height: 100,
+    backgroundColor: "black",
+    marginLeft: 20,
+    borderRadius: 10,
   },
 });
