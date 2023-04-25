@@ -74,8 +74,10 @@ export default function App() {
           <Text style={styles.belegnuudug}>Бэлэгнүүд</Text>
         </View>
 
-        <View style={styles.belegzurag}>
-          <Image source={require("./source/images/beleg.png")}></Image>
+        <View style={styles.belegniizurag}>
+          <View style={styles.belegzurag}>
+            <Image source={require("./source/images/beleg.png")} />
+          </View>
         </View>
       </ScrollView>
       <StatusBar style="auto" />
@@ -201,15 +203,16 @@ const styles = StyleSheet.create({
     color: `#d3d3d3`,
     marginLeft: 20,
   },
-  belegzurag: {
+
+  belegniizurag: {
     width: 90,
     height: 100,
-    backgroundColor: "black",
+    backgroundColor: "red",
     marginLeft: 20,
     borderRadius: 10,
   },
-  img: {
-    width: 80,
+  belegzurag: {
+    width: 90,
     height: 90,
   },
 });
