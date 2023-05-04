@@ -17,14 +17,18 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scview}>
         <View style={styles.view0}>
-          <View style={styles.twoicon}>
-            <View style={styles.i1}>
-              <SimpleLineIcons name="basket" size={32} color="white" />
-            </View>
-            <View style={styles.i2}>
-              <AntDesign name="gift" size={32} color="white" />
-            </View>
-          </View>
+          <SimpleLineIcons
+            name="basket"
+            size={32}
+            color="white"
+            style={{ marginLeft: 300, marginTop: 50 }}
+          />
+          <AntDesign
+            name="gift"
+            size={32}
+            color="white"
+            style={{ marginTop: 50, padding: 25 }}
+          />
         </View>
         <View style={styles.code}>
           <TextInput
@@ -100,7 +104,9 @@ const styles = StyleSheet.create({
     width: 600,
     height: 130,
     backgroundColor: "red",
-    flexDirection: "column",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   twoicon: { flexDirection: "column", marginTop: 20, alignItems: "flex-start" },
 

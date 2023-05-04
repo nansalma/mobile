@@ -1,36 +1,39 @@
 import {
   View,
-  Text,
   ScrollView,
   SafeAreaView,
   StyleSheet,
   StatusBar,
-  Image,
+  Text,
 } from "react-native";
 import React from "react";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
+import AntDesign from "@expo/vector-icons/AntDesign";
 export default function App() {
   return (
     <SafeAreaView style={styles.safest}>
       <ScrollView>
         <View style={styles.header}>
-          <Ionicons name="arrow-back" style={styles.iconback} />
+          <SimpleLineIcons
+            name="basket"
+            size={32}
+            color="white"
+            style={{ marginLeft: 300, marginTop: 50 }}
+          />
+          <AntDesign
+            name="gift"
+            size={32}
+            color="white"
+            style={{ marginTop: 50, padding: 25 }}
+          />
+        </View>
+        <View style={styles.hutulburugview}>
           <Text style={styles.hutulburug}>Хөтөлбөр</Text>
         </View>
 
-        <Image
-          style={styles.zuragsprite}
-          source={require("./source/images/sprite.png")}
-        />
-        <Text style={styles.tailbar}>
-          "Sprite No Sugar" ундааны{"\n"} бөглөөн доторх 9 оронтой кодыг {"\n"}
-          "MMusic" аппликэйшны промо{"\n"} код хэсэгт оруулан 7 хоногийн{"\n"}{" "}
-          үйлчилгээний эрх аваарай.{"\n"}
-          {"\n"} Урамшууллын хугацаанд нэг{"\n"} хэрэглэгч нийт 4 удаа код{" "}
-          {"\n"}ашиглах боломжтой.{"\n"} {"\n"}Урамшуулал: 2023.03.15 - 06.15
-          {"\n"} дуустал үргэлжилнэ.{"\n"}
-          {"\n"} #HeatHappens #StayCool
-        </Text>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <View style={{ flex: 1, height: 1, backgroundColor: "black" }} />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -40,40 +43,20 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
   },
-  safest: {
-    flex: 1,
-  },
   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-
   header: {
-    width: 500,
-    height: 80,
+    height: 130,
     backgroundColor: "red",
     flexDirection: "row",
-    alignItems: "flex-end",
-    shadowColor: "black",
-    shadowOpacity: 50,
-  },
-  iconback: {
-    color: "white",
-    fontSize: 30,
-    marginLeft: 10,
+    alignItems: "center",
+    justifyContent: "center",
   },
   hutulburug: {
+    color: "black",
+    marginTop: 10,
     fontSize: 20,
-    color: "white",
-    fontStyle: "italic",
-    marginLeft: 120,
   },
-  zuragsprite: {
-    width: "100%",
-    flex: 1,
-    height: 200,
-    resizeMode: "contain",
-    marginTop: 20,
-  },
-  tailbar: {
-    margin: 20,
-    fontSize: 20,
+  hutulburugview: {
+    alignItems: "center",
   },
 });
