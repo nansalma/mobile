@@ -51,35 +51,48 @@ export default function App() {
           />
         </View>
 
-        <View style={styles.spriteview}>
+        <View
+          style={{
+            width: 360,
+            height: 210,
+            backgroundColor: "white",
+            marginLeft: 30,
+            marginTop: 10,
+            borderBottomRightRadius: 20,
+            borderBottomLeftRadius: 20,
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
+            elevation: 10,
+          }}
+        >
           <Image
-            style={styles.imgsprite}
+            style={{
+              width: 360,
+              height: 150,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+            }}
             source={require("./source/images/sprite.png")}
           ></Image>
-          <View style={styles.tailbarview}>
-            <Text style={styles.baruuntailbar}>Sprite x M Music</Text>
-            <Text style={styles.zuuntailbar}>
-              {" "}
+          <View
+            style={{
+              width: "100%",
+              height: 60,
+              backgroundColor: "white",
+              borderBottomLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Text style={styles.zuuntailbar}>Sprite x M Music</Text>
+            <Text style={styles.baruuntailbar}>
               Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
             </Text>
           </View>
         </View>
 
-        <View style={styles.spriteview}>
-          <Image
-            style={styles.imgsprite}
-            source={require("./source/images/punch.png")}
-          ></Image>
-          <View style={styles.tailbarview2}>
-            <Text style={styles.twozuun}>
-              Minute maid Punch{"\n"} Хад жимсний амт
-            </Text>
-            <Text style={styles.twobaruun}>
-              {" "}
-              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-07-01
-            </Text>
-          </View>
-        </View>
         <View
           style={{
             width: 360,
@@ -111,8 +124,15 @@ export default function App() {
               borderBottomLeftRadius: 20,
               borderBottomRightRadius: 20,
               flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          ></View>
+          >
+            <Text style={styles.baruuntailbar}>
+              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+            </Text>
+            <Text style={styles.zuuntailbar}>Sprite x M Music</Text>
+          </View>
         </View>
         <View
           style={{ height: 220, backgroundColor: "white", marginTop: 20 }}
