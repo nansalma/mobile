@@ -57,6 +57,7 @@ export default function App() {
         <View style={styles.hutulbur}>
           <Text style={styles.ug}>Хөтөлбөр</Text>
         </View>
+
         <View style={styles.hutulburzurag}>
           <View style={styles.spriteview}>
             <Image
