@@ -10,6 +10,7 @@ import {
 import React from "react";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import { Card } from "react-native-shadow-cards";
 export default function App() {
   return (
     <SafeAreaView style={styles.safest}>
@@ -63,6 +64,59 @@ export default function App() {
             </Text>
           </View>
         </View>
+
+        <View style={styles.spriteview}>
+          <Image
+            style={styles.imgsprite}
+            source={require("./source/images/punch.png")}
+          ></Image>
+          <View style={styles.tailbarview2}>
+            <Text style={styles.twozuun}>
+              Minute maid Punch{"\n"} Хад жимсний амт
+            </Text>
+            <Text style={styles.twobaruun}>
+              {" "}
+              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-07-01
+            </Text>
+          </View>
+        </View>
+        <View
+          style={{
+            width: 360,
+            height: 210,
+            backgroundColor: "white",
+            marginLeft: 30,
+            marginTop: 10,
+            borderBottomRightRadius: 20,
+            borderBottomLeftRadius: 20,
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
+            elevation: 10,
+          }}
+        >
+          <Image
+            style={{
+              width: 360,
+              height: 150,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+            }}
+            source={require("./source/images/punch.png")}
+          ></Image>
+          <View
+            style={{
+              width: "100%",
+              height: 60,
+              backgroundColor: "white",
+              borderBottomLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              flexDirection: "row",
+            }}
+          ></View>
+        </View>
+        <View
+          style={{ height: 220, backgroundColor: "white", marginTop: 20 }}
+        ></View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -92,17 +146,54 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     width: "100%",
-
-    flex: 1,
+    // flex: 1,
     height: 200,
-    resizeMode: "contain",
-    margin: 20,
+    // resizeMode: "contain",
+    margin: 10,
   },
   spriteview: {
-    height: 300,
+    height: 250,
     width: 370,
+    elevation: 5,
+    marginLeft: 15,
   },
   tailbarview: {
     flexDirection: "row",
+    backgroundColor: "plum",
+    marginLeft: 10,
+    width: 370,
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: -30,
+    height: 50,
+  },
+  zuuntailbar: {
+    paddingLeft: 60,
+    fontSize: 13,
+  },
+  baruuntailbar: {
+    fontSize: 13,
+  },
+
+  tailbarview2: {
+    flexDirection: "row",
+    backgroundColor: "plum",
+    marginLeft: 20,
+    width: 370,
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: -30,
+    height: 50,
+  },
+  twozuun: {
+    fontSize: 13,
+  },
+  twobaruun: {
+    fontSize: 13,
+    paddingLeft: 50,
   },
 });
