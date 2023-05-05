@@ -1,21 +1,22 @@
+import { StatusBar } from "expo-status-bar";
 import {
-  View,
-  ScrollView,
-  SafeAreaView,
   StyleSheet,
-  StatusBar,
   Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  TextInput,
+  onChangeNumber,
   Image,
 } from "react-native";
-import React from "react";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import { Card } from "react-native-shadow-cards";
+import Feather from "@expo/vector-icons/Feather";
 export default function App() {
   return (
-    <SafeAreaView style={styles.safest}>
-      <ScrollView>
-        <View style={styles.header}>
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scview}>
+        <View style={styles.view0}>
           <SimpleLineIcons
             name="basket"
             size={32}
@@ -29,191 +30,211 @@ export default function App() {
             style={{ marginTop: 50, padding: 25 }}
           />
         </View>
-        <View style={styles.hutulburugview}>
-          <Text style={styles.hutulburug}>Хөтөлбөр</Text>
-        </View>
-
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            marginLeft: 30,
-            marginRight: 30,
-            marginTop: 10,
-          }}
-        >
-          <View
-            style={{
-              flex: 1,
-              height: 1,
-              backgroundColor: `#dcdcdc`,
-            }}
+        <View style={styles.code}>
+          <TextInput
+            style={styles.input}
+            placeholder="Код оруулах"
+            onChangeText={onChangeNumber}
+            keyboardType="default"
+            maxLength={9}
           />
-        </View>
-
-        <View
-          style={{
-            width: 360,
-            height: 210,
-            backgroundColor: "white",
-            marginLeft: 30,
-            marginTop: 10,
-            borderBottomRightRadius: 20,
-            borderBottomLeftRadius: 20,
-            borderTopLeftRadius: 20,
-            borderTopRightRadius: 20,
-            elevation: 10,
-          }}
-        >
-          <Image
-            style={{
-              width: 360,
-              height: 150,
-              borderTopLeftRadius: 20,
-              borderTopRightRadius: 20,
-            }}
-            source={require("./source/images/sprite.png")}
-          ></Image>
-          <View
-            style={{
-              width: "100%",
-              height: 60,
-              backgroundColor: "white",
-              borderBottomLeftRadius: 20,
-              borderBottomRightRadius: 20,
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Text style={styles.zuuntailbar}>Sprite x M Music</Text>
-            <Text style={styles.baruuntailbar}>
-              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
-            </Text>
+          <View style={styles.isend}>
+            <Feather name="send" size={32} color="red" />
           </View>
         </View>
+        <ScrollView horizontal={true}>
+          <View style={styles.zuragniiview}>
+            <Image
+              style={styles.zurag}
+              source={require("./source/images/zurag1.png")}
+            />
+            <Image
+              style={styles.zurag}
+              source={require("./source/images/zurag1.png")}
+            />
+          </View>
+        </ScrollView>
+        <View style={styles.hutulbur}>
+          <Text style={styles.ug}>Хөтөлбөр</Text>
+        </View>
 
-        <View
-          style={{
-            width: 360,
-            height: 210,
-            backgroundColor: "white",
-            marginLeft: 30,
-            marginTop: 10,
-            borderBottomRightRadius: 20,
-            borderBottomLeftRadius: 20,
-            borderTopLeftRadius: 20,
-            borderTopRightRadius: 20,
-            elevation: 10,
-          }}
-        >
-          <Image
-            style={{
-              width: 360,
-              height: 150,
-              borderTopLeftRadius: 20,
-              borderTopRightRadius: 20,
-            }}
-            source={require("./source/images/punch.png")}
-          ></Image>
-          <View
-            style={{
-              width: "100%",
-              height: 60,
-              backgroundColor: "white",
-              borderBottomLeftRadius: 20,
-              borderBottomRightRadius: 20,
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Text style={styles.baruuntailbar}>
-              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
-            </Text>
-            <Text style={styles.zuuntailbar}>Sprite x M Music</Text>
+        <View style={styles.hutulburzurag}>
+          <View style={styles.spriteview}>
+            <Image
+              style={styles.sprite}
+              source={require("./source/images/sprite.png")}
+            />
+            <View style={styles.doortailbar}>
+              <Text style={styles.dtailbarst}> Sprite x M Music</Text>
+              <Text style={styles.baruuntailabr}>
+                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+              </Text>
+            </View>
           </View>
         </View>
-        <View
-          style={{ height: 220, backgroundColor: "white", marginTop: 20 }}
-        ></View>
+        <View style={styles.beleg}>
+          <Text style={styles.belegnuudug}>Бэлэгнүүд</Text>
+        </View>
+        <View style={styles.belegview}>
+          <Image
+            style={styles.belegzurag}
+            source={require("./source/images/beleg.png")}
+          />
+          <View style={styles.chimeglelview}>
+            <Text style={styles.shinejilug}>Шинэ жилийн чимэглэл</Text>
+          </View>
+          <View style={styles.iconsags}>
+            <SimpleLineIcons name="basket" size={20} color="white" />
+          </View>
+        </View>
       </ScrollView>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
   },
+  scview: { backgroundColor: "white", flex: 1 },
+
   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  header: {
+  view0: {
+    width: 600,
     height: 130,
     backgroundColor: "red",
     flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  twoicon: { flexDirection: "column", marginTop: 20, alignItems: "flex-start" },
+
+  i1: {
+    marginLeft: 300,
+    marginTop: 30,
+  },
+  i2: {
+    marginLeft: 350,
+    marginTop: -27,
+  },
+  code: {
+    backgroundColor: "red",
+
+    height: 80,
     alignItems: "center",
     justifyContent: "center",
+    flexDirection: "column",
   },
-  hutulburug: {
-    color: "black",
+
+  input: {
+    borderRadius: 10,
+    backgroundColor: `#f8f8ff`,
+    width: 300,
+    height: 50,
+    paddingLeft: 20,
+    marginTop: 20,
+  },
+  isend: {
+    backgroundColor: `#dcdcdc`,
+    marginLeft: 250,
+    marginBottom: 20,
+    marginTop: -50,
+    height: 50,
+    borderRadius: 10,
+    width: 50,
+    padding: 9,
+  },
+
+  zurag: {
+    resizeMode: "contain",
+    flex: 1,
+    width: "100%",
+    height: 300,
     marginTop: 10,
-    fontSize: 20,
+    flexDirection: "column",
   },
-  hutulburugview: {
-    alignItems: "center",
+  zuragniiview: {
+    width: 900,
+    flexDirection: "row",
+    flex: 1,
+    flexWrap: "wrap",
+    resizeMode: "cover",
   },
-  imgsprite: {
+  hutulbur: {
+    fontSize: 15,
+    marginLeft: 10,
+  },
+  ug: {
+    color: `#d3d3d3`,
+    marginLeft: 13,
+  },
+  sprite: {
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     width: "100%",
-    // flex: 1,
+    flex: 1,
     height: 200,
-    // resizeMode: "contain",
-    margin: 10,
+    resizeMode: "contain",
+  },
+  hutulburzurag: {
+    width: 370,
+    height: 200,
+    backgroundColor: "black",
+    borderWidth: 3,
+    margin: 20,
+    marginTop: -2,
+    marginRight: 20,
+    shadowColor: "black",
+    shadowOpacity: 20,
+    borderRadius: 10,
+    shadowOffset: { width: 15, height: 15 },
+  },
+  dtailbarst: {
+    color: `#d3d3d3`,
+    marginLeft: -15,
+  },
+  doortailbar: {
+    marginLeft: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   spriteview: {
-    height: 250,
-    width: 370,
-    elevation: 5,
-    marginLeft: 15,
+    width: 365,
+    height: 200,
+    borderRadius: 10,
   },
-  tailbarview: {
-    flexDirection: "row",
-    backgroundColor: "plum",
-    marginLeft: 10,
-    width: 370,
-    borderBottomRightRadius: 20,
-    borderBottomLeftRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: -30,
-    height: 50,
+  baruuntailabr: {
+    color: `#d3d3d3`,
+    textAlign: "right",
   },
-  zuuntailbar: {
-    paddingLeft: 60,
-    fontSize: 13,
-  },
-  baruuntailbar: {
-    fontSize: 13,
+  belegnuudug: {
+    color: `#d3d3d3`,
+    marginLeft: 20,
   },
 
-  tailbarview2: {
-    flexDirection: "row",
-    backgroundColor: "plum",
+  belegview: {
+    width: 120,
+    height: 140,
+    backgroundColor: "red",
     marginLeft: 20,
-    width: 370,
-    borderBottomRightRadius: 20,
-    borderBottomLeftRadius: 20,
-    justifyContent: "center",
+    borderRadius: 15,
     alignItems: "center",
-    marginTop: -30,
-    height: 50,
   },
-  twozuun: {
-    fontSize: 13,
+  belegzurag: {
+    width: 90,
+    height: 90,
+    borderRadius: 15,
+    marginTop: 10,
   },
-  twobaruun: {
-    fontSize: 13,
-    paddingLeft: 50,
+  shinejilug: {
+    fontSize: 10,
+    color: `#d3d3d3`,
+  },
+  chimeglelview: {},
+  iconsags: {
+    marginLeft: 90,
+    marginTop: -20,
   },
 });

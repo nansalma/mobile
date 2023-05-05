@@ -5,10 +5,12 @@ import {
   StyleSheet,
   StatusBar,
   Text,
+  Image,
 } from "react-native";
 import React from "react";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
+
 export default function App() {
   return (
     <SafeAreaView style={styles.safest}>
@@ -49,7 +51,95 @@ export default function App() {
           />
         </View>
 
-        <View style={styles.sprite}></View>
+        <View
+          style={{
+            width: 360,
+            height: 200,
+            backgroundColor: "white",
+            marginLeft: 30,
+            marginTop: 20,
+            borderBottomRightRadius: 20,
+            borderBottomLeftRadius: 20,
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
+            elevation: 10,
+          }}
+        >
+          <Image
+            style={{
+              width: 360,
+              height: 150,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+            }}
+            source={require("./source/images/sprite.png")}
+          ></Image>
+          <View
+            style={{
+              width: "100%",
+              height: 40,
+              backgroundColor: "white",
+              borderBottomLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Text style={styles.zuuntailbar}>Sprite x M Music</Text>
+            <Text style={styles.baruuntailbar}>
+              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+            </Text>
+          </View>
+        </View>
+
+        <View
+          style={{
+            width: 360,
+            height: 210,
+            backgroundColor: "white",
+            marginLeft: 30,
+            marginTop: 10,
+            borderBottomRightRadius: 20,
+            borderBottomLeftRadius: 20,
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
+            elevation: 10,
+          }}
+        >
+          <Image
+            style={{
+              width: 360,
+              height: 150,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+            }}
+            source={require("./source/images/punch.png")}
+          ></Image>
+          <View
+            style={{
+              width: "100%",
+              height: 40,
+              backgroundColor: "white",
+              borderBottomLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Text style={styles.zuuntailbar}>
+              Хад жимсний амттай шинэ{"\n"} амт худалдаанд гарлаа.
+            </Text>
+
+            <Text style={styles.baruuntailbar}>
+              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+            </Text>
+          </View>
+        </View>
+        <View
+          style={{ height: 220, backgroundColor: "white", marginTop: 20 }}
+        ></View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -74,5 +164,59 @@ const styles = StyleSheet.create({
   },
   hutulburugview: {
     alignItems: "center",
+  },
+  imgsprite: {
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    width: "100%",
+    // flex: 1,
+    height: 200,
+    // resizeMode: "contain",
+    margin: 10,
+  },
+  spriteview: {
+    height: 250,
+    width: 370,
+    elevation: 5,
+    marginLeft: 15,
+  },
+  tailbarview: {
+    flexDirection: "row",
+    backgroundColor: "plum",
+    marginLeft: 10,
+    width: 370,
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: -30,
+    height: 50,
+  },
+  zuuntailbar: {
+    paddingLeft: 60,
+    fontSize: 13,
+  },
+  baruuntailbar: {
+    fontSize: 13,
+  },
+
+  tailbarview2: {
+    flexDirection: "row",
+    backgroundColor: "plum",
+    marginLeft: 20,
+    width: 370,
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: -30,
+    height: 50,
+  },
+  twozuun: {
+    fontSize: 13,
+  },
+  twobaruun: {
+    fontSize: 13,
+    paddingLeft: 50,
   },
 });
