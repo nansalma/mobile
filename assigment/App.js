@@ -31,9 +31,19 @@ export default function App() {
           <Text style={styles.hutulburug}>Хөтөлбөр</Text>
         </View>
 
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <View style={{ flex: 1, height: 1, backgroundColor: "black" }} />
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            marginLeft: 30,
+            marginRight: 30,
+            marginTop: 10,
+          }}
+        >
+          <View style={{ flex: 1, height: 1, backgroundColor: `#dcdcdc` }} />
         </View>
+
+        <View style={styles.sprite}></View>
       </ScrollView>
     </SafeAreaView>
   );
