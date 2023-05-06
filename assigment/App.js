@@ -55,7 +55,7 @@ export default function App() {
         <View
           style={{
             width: 360,
-            height: 200,
+            height: 190,
             backgroundColor: "white",
             marginLeft: 27,
             marginTop: 20,
@@ -88,20 +88,22 @@ export default function App() {
               alignItems: "center",
             }}
           >
-            <Text style={styles.zuuntailbar}>Sprite x M Music</Text>
-            <Text style={styles.baruuntailbar}>
-              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
-            </Text>
+            <View style={styles.niittailbar}>
+              <Text style={styles.spritez}>Sprite x M Music</Text>
+              <Text style={styles.spriteb}>
+                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+              </Text>
+            </View>
           </View>
         </View>
 
         <View
           style={{
             width: 360,
-            height: 210,
+            height: 200,
             backgroundColor: "white",
             marginLeft: 27,
-            marginTop: 10,
+            marginTop: 20,
             borderBottomRightRadius: 15,
             borderBottomLeftRadius: 15,
             borderTopLeftRadius: 15,
@@ -178,16 +180,11 @@ const styles = StyleSheet.create({
     // resizeMode: "contain",
     margin: 10,
   },
-  spriteview: {
-    height: 250,
-    width: 370,
-    elevation: 5,
-    marginLeft: 15,
-  },
 
   zuuntailbar: {
     fontSize: 13,
     fontWeight: "100",
+    textAlign: "left",
   },
   baruuntailbar: {
     fontSize: 13,
@@ -198,5 +195,18 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+  },
+
+  spriteb: {
+    textAlign: "left",
+    fontWeight: "100",
+    fontSize: 13,
+    paddingLeft: 70,
+  },
+
+  spritez: {
+    textAlign: "right",
+    fontWeight: "100",
+    fontSize: 13,
   },
 });

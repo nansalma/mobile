@@ -29,6 +29,7 @@ export default function App() {
             style={{ marginTop: 50, padding: 25 }}
           />
         </View>
+
         <View style={styles.hutulburugview}>
           <Text style={styles.hutulburug}>Хөтөлбөр</Text>
         </View>
@@ -54,14 +55,14 @@ export default function App() {
         <View
           style={{
             width: 360,
-            height: 200,
+            height: 190,
             backgroundColor: "white",
-            marginLeft: 30,
+            marginLeft: 27,
             marginTop: 20,
-            borderBottomRightRadius: 20,
-            borderBottomLeftRadius: 20,
-            borderTopLeftRadius: 20,
-            borderTopRightRadius: 20,
+            borderBottomRightRadius: 15,
+            borderBottomLeftRadius: 15,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
             elevation: 10,
           }}
         >
@@ -69,11 +70,12 @@ export default function App() {
             style={{
               width: 360,
               height: 150,
-              borderTopLeftRadius: 20,
-              borderTopRightRadius: 20,
+              borderTopLeftRadius: 15,
+              borderTopRightRadius: 15,
             }}
             source={require("./source/images/sprite.png")}
           ></Image>
+
           <View
             style={{
               width: "100%",
@@ -86,24 +88,26 @@ export default function App() {
               alignItems: "center",
             }}
           >
-            <Text style={styles.zuuntailbar}>Sprite x M Music</Text>
-            <Text style={styles.baruuntailbar}>
-              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
-            </Text>
+            <View style={styles.niittailbar}>
+              <Text style={styles.spritez}>Sprite x M Music</Text>
+              <Text style={styles.spriteb}>
+                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+              </Text>
+            </View>
           </View>
         </View>
 
         <View
           style={{
             width: 360,
-            height: 210,
+            height: 200,
             backgroundColor: "white",
-            marginLeft: 30,
-            marginTop: 10,
-            borderBottomRightRadius: 20,
-            borderBottomLeftRadius: 20,
-            borderTopLeftRadius: 20,
-            borderTopRightRadius: 20,
+            marginLeft: 27,
+            marginTop: 20,
+            borderBottomRightRadius: 15,
+            borderBottomLeftRadius: 15,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
             elevation: 10,
           }}
         >
@@ -111,8 +115,8 @@ export default function App() {
             style={{
               width: 360,
               height: 150,
-              borderTopLeftRadius: 20,
-              borderTopRightRadius: 20,
+              borderTopLeftRadius: 15,
+              borderTopRightRadius: 15,
             }}
             source={require("./source/images/punch.png")}
           ></Image>
@@ -128,13 +132,15 @@ export default function App() {
               alignItems: "center",
             }}
           >
-            <Text style={styles.zuuntailbar}>
-              Хад жимсний амттай шинэ{"\n"} амт худалдаанд гарлаа.
-            </Text>
+            <View style={styles.niittailbar}>
+              <Text style={styles.zuuntailbar}>
+                Хад жимсний амттай шинэ{"\n"} амт худалдаанд гарлаа.
+              </Text>
 
-            <Text style={styles.baruuntailbar}>
-              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
-            </Text>
+              <Text style={styles.baruuntailbar}>
+                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -174,49 +180,33 @@ const styles = StyleSheet.create({
     // resizeMode: "contain",
     margin: 10,
   },
-  spriteview: {
-    height: 250,
-    width: 370,
-    elevation: 5,
-    marginLeft: 15,
-  },
-  tailbarview: {
-    flexDirection: "row",
-    backgroundColor: "plum",
-    marginLeft: 10,
-    width: 370,
-    borderBottomRightRadius: 20,
-    borderBottomLeftRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: -30,
-    height: 50,
-  },
+
   zuuntailbar: {
-    paddingLeft: 60,
     fontSize: 13,
+    fontWeight: "100",
+    textAlign: "left",
   },
   baruuntailbar: {
     fontSize: 13,
+    fontWeight: "100",
   },
 
-  tailbarview2: {
+  niittailbar: {
     flexDirection: "row",
-    backgroundColor: "plum",
-    marginLeft: 20,
-    width: 370,
-    borderBottomRightRadius: 20,
-    borderBottomLeftRadius: 20,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: -30,
-    height: 50,
   },
-  twozuun: {
+
+  spriteb: {
+    textAlign: "left",
+    fontWeight: "100",
     fontSize: 13,
+    paddingLeft: 70,
   },
-  twobaruun: {
+
+  spritez: {
+    textAlign: "right",
+    fontWeight: "100",
     fontSize: 13,
-    paddingLeft: 50,
   },
 });
