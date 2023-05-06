@@ -31,7 +31,7 @@ export default function App() {
         </View>
 
         <View style={styles.hutulburugview}>
-          <Text style={styles.hutulburug}>Нэмэлт оноо</Text>
+          <Text style={styles.hutulburug}>Хөтөлбөр</Text>
         </View>
 
         <View
@@ -73,7 +73,7 @@ export default function App() {
               borderTopLeftRadius: 15,
               borderTopRightRadius: 15,
             }}
-            source={require("./source/images/nemelt1.png")}
+            source={require("./source/images/sprite.png")}
           ></Image>
 
           <View
@@ -89,8 +89,9 @@ export default function App() {
             }}
           >
             <View style={styles.niittailbar}>
-              <Text style={styles.baruundood}>
-                Believe in Magic&Win {"\n"} хөтөлбөрийн тухай
+              <Text style={styles.spritez}>Sprite x M Music</Text>
+              <Text style={styles.spriteb}>
+                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
               </Text>
             </View>
           </View>
@@ -117,7 +118,7 @@ export default function App() {
               borderTopLeftRadius: 15,
               borderTopRightRadius: 15,
             }}
-            source={require("./source/images/nemelt2.png")}
+            source={require("./source/images/punch.png")}
           ></Image>
           <View
             style={{
@@ -133,91 +134,12 @@ export default function App() {
           >
             <View style={styles.niittailbar}>
               <Text style={styles.zuuntailbar}>
-                Believe in Magic&Win {"\n"} хөтөлбөрт оролцох заавар
+                Хад жимсний амттай шинэ{"\n"} амт худалдаанд гарлаа.
               </Text>
-            </View>
-          </View>
-        </View>
-        <View
-          style={{
-            width: 360,
-            height: 200,
-            backgroundColor: "white",
-            marginLeft: 27,
-            marginTop: 20,
-            borderBottomRightRadius: 15,
-            borderBottomLeftRadius: 15,
-            borderTopLeftRadius: 15,
-            borderTopRightRadius: 15,
-            elevation: 10,
-          }}
-        >
-          <Image
-            style={{
-              width: 360,
-              height: 150,
-              borderTopLeftRadius: 15,
-              borderTopRightRadius: 15,
-            }}
-            source={require("./source/images/nemelt3.png")}
-          ></Image>
-          <View
-            style={{
-              width: "100%",
-              height: 40,
-              backgroundColor: "white",
-              borderBottomLeftRadius: 20,
-              borderBottomRightRadius: 20,
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <View style={styles.niittailbar}>
-              <Text style={styles.zuuntailbar}>
-                Coca-Cola {"\n"} шинэ савалгаа
-              </Text>
-            </View>
-          </View>
-        </View>
 
-        <View
-          style={{
-            width: 360,
-            height: 200,
-            backgroundColor: "white",
-            marginLeft: 27,
-            marginTop: 20,
-            borderBottomRightRadius: 15,
-            borderBottomLeftRadius: 15,
-            borderTopLeftRadius: 15,
-            borderTopRightRadius: 15,
-            elevation: 10,
-          }}
-        >
-          <Image
-            style={{
-              width: 360,
-              height: 150,
-              borderTopLeftRadius: 15,
-              borderTopRightRadius: 15,
-            }}
-            source={require("./source/images/nemelt4.png")}
-          ></Image>
-          <View
-            style={{
-              width: "100%",
-              height: 40,
-              backgroundColor: "white",
-              borderBottomLeftRadius: 20,
-              borderBottomRightRadius: 20,
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <View style={styles.niittailbar}>
-              <Text style={styles.zuuntailbar}>Real Magic</Text>
+              <Text style={styles.baruuntailbar}>
+                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+              </Text>
             </View>
           </View>
         </View>
@@ -262,14 +184,28 @@ const styles = StyleSheet.create({
   zuuntailbar: {
     fontSize: 13,
     fontWeight: "100",
+    textAlign: "left",
   },
   baruuntailbar: {
     fontSize: 13,
     fontWeight: "100",
   },
 
-  niittailbar: {},
-  baruundood: {
+  niittailbar: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  spriteb: {
+    textAlign: "left",
+    fontWeight: "100",
+    fontSize: 13,
+    paddingLeft: 70,
+  },
+
+  spritez: {
+    textAlign: "right",
     fontWeight: "100",
     fontSize: 13,
   },
