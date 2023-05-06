@@ -16,18 +16,18 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scview}>
-        <View style={styles.view0}>
+        <View style={styles.header}>
           <SimpleLineIcons
             name="basket"
             size={30}
             color="white"
-            style={{ marginTop: 50 }}
+            style={{ marginLeft: 300, marginTop: 50 }}
           />
           <AntDesign
             name="gift"
             size={30}
             color="white"
-            style={{ marginTop: 70 }}
+            style={{ marginTop: 50, padding: 25 }}
           />
         </View>
 
@@ -119,22 +119,14 @@ const styles = StyleSheet.create({
 
   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
 
-  view0: {
-    width: 600,
-    height: 100,
-    backgroundColor: "blue",
+  header: {
+    height: 130,
+    backgroundColor: "red",
     flexDirection: "row",
+    alignItems: "center",
     justifyContent: "center",
   },
 
-  i1: {
-    marginLeft: 300,
-    marginTop: 30,
-  },
-  i2: {
-    marginLeft: 350,
-    marginTop: -27,
-  },
   code: {
     backgroundColor: "red",
 
