@@ -1,69 +1,64 @@
-import { StatusBar } from "expo-status-bar";
 import {
-  StyleSheet,
-  Text,
   View,
-  SafeAreaView,
   ScrollView,
-  TextInput,
-  onChangeNumber,
+  SafeAreaView,
+  StyleSheet,
+  StatusBar,
+  Text,
   Image,
 } from "react-native";
+import React from "react";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import Feather from "@expo/vector-icons/Feather";
+
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.scview}>
-        <View style={styles.view0}>
+    <SafeAreaView style={styles.safest}>
+      <ScrollView>
+        <View style={styles.header}>
           <SimpleLineIcons
             name="basket"
             size={32}
             color="white"
-            style={{ marginTop: 50, padding: 25 }}
+            style={{ marginLeft: 300, marginTop: 50 }}
           />
           <AntDesign
             name="gift"
             size={32}
             color="white"
-            style={{ marginTop: 70 }}
+            style={{ marginTop: 50, padding: 25 }}
           />
         </View>
-        <View style={styles.code}>
-          <TextInput
-            style={styles.input}
-            placeholder="Код оруулах"
-            onChangeText={onChangeNumber}
-            keyboardType="default"
-            maxLength={9}
-          />
-          <View style={styles.isend}>
-            <Feather name="send" size={32} color="red" />
-          </View>
-        </View>
-        <ScrollView horizontal={true}>
-          <View style={styles.zuragniiview}>
-            <Image
-              style={styles.zurag}
-              source={require("./source/images/zurag1.png")}
-            />
-            <Image
-              style={styles.zurag}
-              source={require("./source/images/zurag1.png")}
-            />
-          </View>
-        </ScrollView>
-        <View style={styles.hutulbur}>
-          <Text style={styles.ug}>Хөтөлбөр</Text>
+
+        <View style={styles.hutulburugview}>
+          <Text style={styles.hutulburug}>Хөтөлбөр</Text>
         </View>
 
         <View
           style={{
-            width: 370,
-            height: 190,
+            flexDirection: "row",
+            alignItems: "center",
+            marginLeft: 30,
+            marginRight: 30,
+            marginTop: 10,
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              height: 1,
+              backgroundColor: `#dcdcdc`,
+            }}
+          />
+        </View>
+
+        <View
+          style={{
+            width: 360,
+            height: 200,
             backgroundColor: "white",
-            marginLeft: 23,
+            marginLeft: 27,
+            marginTop: 20,
             borderBottomRightRadius: 15,
             borderBottomLeftRadius: 15,
             borderTopLeftRadius: 15,
@@ -73,14 +68,26 @@ export default function App() {
         >
           <Image
             style={{
-              width: 370,
+              width: 360,
               height: 150,
-              borderTopLeftRadius: 20,
-              borderTopRightRadius: 20,
+              borderTopLeftRadius: 15,
+              borderTopRightRadius: 15,
             }}
             source={require("./source/images/sprite.png")}
           ></Image>
-          <View style={styles.niittailbar}>
+
+          <View
+            style={{
+              width: "100%",
+              height: 40,
+              backgroundColor: "white",
+              borderBottomLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Text style={styles.zuuntailbar}>Sprite x M Music</Text>
             <Text style={styles.baruuntailbar}>
               Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
@@ -88,177 +95,108 @@ export default function App() {
           </View>
         </View>
 
-        <View style={styles.beleg}>
-          <Text style={styles.belegnuudug}>Бэлэгнүүд</Text>
-        </View>
-        <View style={styles.belegview}>
+        <View
+          style={{
+            width: 360,
+            height: 210,
+            backgroundColor: "white",
+            marginLeft: 27,
+            marginTop: 10,
+            borderBottomRightRadius: 15,
+            borderBottomLeftRadius: 15,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+            elevation: 10,
+          }}
+        >
           <Image
-            style={styles.belegzurag}
-            source={require("./source/images/beleg.png")}
-          />
-          <View style={styles.chimeglelview}>
-            <Text style={styles.shinejilug}>Шинэ жилийн{"\n"} чимэглэл</Text>
-          </View>
-          <View style={styles.iconsags}>
-            <SimpleLineIcons name="basket" size={20} color="black" />
+            style={{
+              width: 360,
+              height: 150,
+              borderTopLeftRadius: 15,
+              borderTopRightRadius: 15,
+            }}
+            source={require("./source/images/punch.png")}
+          ></Image>
+          <View
+            style={{
+              width: "100%",
+              height: 40,
+              backgroundColor: "white",
+              borderBottomLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <View style={styles.niittailbar}>
+              <Text style={styles.zuuntailbar}>
+                Хад жимсний амттай шинэ{"\n"} амт худалдаанд гарлаа.
+              </Text>
+
+              <Text style={styles.baruuntailbar}>
+                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+              </Text>
+            </View>
           </View>
         </View>
+        <View
+          style={{ height: 220, backgroundColor: "white", marginTop: 20 }}
+        ></View>
       </ScrollView>
-      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
   },
-  scview: { backgroundColor: "white", flex: 1 },
-
   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  view0: {
-    width: 600,
-    // height: 130,
+  header: {
+    height: 130,
     backgroundColor: "red",
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  twoicon: { flexDirection: "column", marginTop: 20, alignItems: "flex-start" },
-
-  i1: {
-    marginLeft: 300,
-    marginTop: 30,
-  },
-  i2: {
-    marginLeft: 350,
-    marginTop: -27,
-  },
-  code: {
-    backgroundColor: "red",
-
-    height: 100,
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "column",
   },
-
-  input: {
-    borderRadius: 10,
-    backgroundColor: `#f8f8ff`,
-    width: 300,
-    height: 50,
-    paddingLeft: 20,
-    marginTop: 20,
-  },
-  isend: {
-    backgroundColor: `#dcdcdc`,
-    marginLeft: 250,
-    marginBottom: 20,
-    marginTop: -50,
-    height: 50,
-    borderRadius: 10,
-    width: 50,
-    padding: 9,
-  },
-
-  zurag: {
-    flex: 1,
-    // width: "100%",
-    height: 270,
-    // marginTop: 10,
-    flexDirection: "column",
-  },
-  zuragniiview: {
-    width: 900,
-    flexDirection: "row",
-    flex: 1,
-    flexWrap: "wrap",
-    resizeMode: "cover",
-  },
-  hutulbur: {
-    fontSize: 15,
-    marginLeft: 10,
-    marginTop: 10,
-  },
-  ug: {
+  hutulburug: {
     color: "black",
-    marginLeft: 13,
-    fontWeight: "100",
+    marginTop: 10,
+    fontSize: 20,
   },
-  sprite: {
+  hutulburugview: {
+    alignItems: "center",
+  },
+  imgsprite: {
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     width: "100%",
-    flex: 1,
+    // flex: 1,
     height: 200,
-    resizeMode: "contain",
-  },
-
-  // dtailbarst: {
-  //   color: `#d3d3d3`,
-  //   marginLeft: -15,
-  // },
-  doortailbar: {
-    marginLeft: 20,
-    flexDirection: "row",
-    justifyContent: "space-between",
+    // resizeMode: "contain",
+    margin: 10,
   },
   spriteview: {
-    width: 365,
-    height: 200,
-    borderRadius: 10,
+    height: 250,
+    width: 370,
+    elevation: 5,
+    marginLeft: 15,
   },
 
-  belegnuudug: {
-    color: "black",
-    marginLeft: 20,
+  zuuntailbar: {
+    fontSize: 13,
     fontWeight: "100",
-  },
-
-  belegview: {
-    width: 120,
-    height: 140,
-    backgroundColor: "white",
-    marginLeft: 20,
-    borderRadius: 15,
-    alignItems: "center",
-    elevation: 10,
-  },
-  belegzurag: {
-    width: 90,
-    height: 90,
-    borderRadius: 15,
-    marginTop: 10,
-  },
-  shinejilug: {
-    fontSize: 10,
-    color: "black",
-    fontWeight: "100",
-  },
-  chimeglelview: {},
-
-  iconsags: {
-    marginLeft: 90,
-    marginTop: -20,
-  },
-  niittailbar: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
   },
   baruuntailbar: {
-    color: "black",
-    paddingLeft: 90,
-    textAlign: "right",
     fontSize: 13,
     fontWeight: "100",
   },
-  zuuntailbar: {
-    color: "black",
-    marginLeft: 10,
-    fontSize: 13,
-    fontWeight: "100",
+
+  niittailbar: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
