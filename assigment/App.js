@@ -21,13 +21,13 @@ export default function App() {
             name="basket"
             size={32}
             color="white"
-            style={{ marginLeft: 300, marginTop: 50 }}
+            style={{ marginTop: 50, padding: 25 }}
           />
           <AntDesign
             name="gift"
             size={32}
             color="white"
-            style={{ marginTop: 50, padding: 25 }}
+            style={{ marginTop: 70 }}
           />
         </View>
         <View style={styles.code}>
@@ -58,20 +58,36 @@ export default function App() {
           <Text style={styles.ug}>Хөтөлбөр</Text>
         </View>
 
-        <View style={styles.hutulburzurag}>
-          <View style={styles.spriteview}>
-            <Image
-              style={styles.sprite}
-              source={require("./source/images/sprite.png")}
-            />
-            <View style={styles.doortailbar}>
-              <Text style={styles.dtailbarst}> Sprite x M Music</Text>
-              <Text style={styles.baruuntailabr}>
-                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
-              </Text>
-            </View>
+        <View
+          style={{
+            width: 370,
+            height: 190,
+            backgroundColor: "white",
+            marginLeft: 23,
+            borderBottomRightRadius: 15,
+            borderBottomLeftRadius: 15,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+            elevation: 10,
+          }}
+        >
+          <Image
+            style={{
+              width: 370,
+              height: 150,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+            }}
+            source={require("./source/images/sprite.png")}
+          ></Image>
+          <View style={styles.niittailbar}>
+            <Text style={styles.zuuntailbar}>Sprite x M Music</Text>
+            <Text style={styles.baruuntailbar}>
+              Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+            </Text>
           </View>
         </View>
+
         <View style={styles.beleg}>
           <Text style={styles.belegnuudug}>Бэлэгнүүд</Text>
         </View>
@@ -81,10 +97,10 @@ export default function App() {
             source={require("./source/images/beleg.png")}
           />
           <View style={styles.chimeglelview}>
-            <Text style={styles.shinejilug}>Шинэ жилийн чимэглэл</Text>
+            <Text style={styles.shinejilug}>Шинэ жилийн{"\n"} чимэглэл</Text>
           </View>
           <View style={styles.iconsags}>
-            <SimpleLineIcons name="basket" size={20} color="white" />
+            <SimpleLineIcons name="basket" size={20} color="black" />
           </View>
         </View>
       </ScrollView>
@@ -103,7 +119,7 @@ const styles = StyleSheet.create({
   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   view0: {
     width: 600,
-    height: 130,
+    // height: 130,
     backgroundColor: "red",
     flexDirection: "row",
     justifyContent: "center",
@@ -122,7 +138,7 @@ const styles = StyleSheet.create({
   code: {
     backgroundColor: "red",
 
-    height: 80,
+    height: 100,
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
@@ -148,11 +164,10 @@ const styles = StyleSheet.create({
   },
 
   zurag: {
-    resizeMode: "contain",
     flex: 1,
-    width: "100%",
-    height: 300,
-    marginTop: 10,
+    // width: "100%",
+    height: 270,
+    // marginTop: 10,
     flexDirection: "column",
   },
   zuragniiview: {
@@ -165,10 +180,12 @@ const styles = StyleSheet.create({
   hutulbur: {
     fontSize: 15,
     marginLeft: 10,
+    marginTop: 10,
   },
   ug: {
-    color: `#d3d3d3`,
+    color: "black",
     marginLeft: 13,
+    fontWeight: "100",
   },
   sprite: {
     borderTopLeftRadius: 10,
@@ -178,23 +195,11 @@ const styles = StyleSheet.create({
     height: 200,
     resizeMode: "contain",
   },
-  hutulburzurag: {
-    width: 370,
-    height: 200,
-    backgroundColor: "black",
-    borderWidth: 3,
-    margin: 20,
-    marginTop: -2,
-    marginRight: 20,
-    shadowColor: "black",
-    shadowOpacity: 20,
-    borderRadius: 10,
-    shadowOffset: { width: 15, height: 15 },
-  },
-  dtailbarst: {
-    color: `#d3d3d3`,
-    marginLeft: -15,
-  },
+
+  // dtailbarst: {
+  //   color: `#d3d3d3`,
+  //   marginLeft: -15,
+  // },
   doortailbar: {
     marginLeft: 20,
     flexDirection: "row",
@@ -205,22 +210,21 @@ const styles = StyleSheet.create({
     height: 200,
     borderRadius: 10,
   },
-  baruuntailabr: {
-    color: `#d3d3d3`,
-    textAlign: "right",
-  },
+
   belegnuudug: {
-    color: `#d3d3d3`,
+    color: "black",
     marginLeft: 20,
+    fontWeight: "100",
   },
 
   belegview: {
     width: 120,
     height: 140,
-    backgroundColor: "red",
+    backgroundColor: "white",
     marginLeft: 20,
     borderRadius: 15,
     alignItems: "center",
+    elevation: 10,
   },
   belegzurag: {
     width: 90,
@@ -230,11 +234,31 @@ const styles = StyleSheet.create({
   },
   shinejilug: {
     fontSize: 10,
-    color: `#d3d3d3`,
+    color: "black",
+    fontWeight: "100",
   },
   chimeglelview: {},
+
   iconsags: {
     marginLeft: 90,
     marginTop: -20,
+  },
+  niittailbar: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  baruuntailbar: {
+    color: "black",
+    paddingLeft: 90,
+    textAlign: "right",
+    fontSize: 13,
+    fontWeight: "100",
+  },
+  zuuntailbar: {
+    color: "black",
+    marginLeft: 10,
+    fontSize: 13,
+    fontWeight: "100",
   },
 });
