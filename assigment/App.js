@@ -10,7 +10,7 @@ import {
 import React from "react";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
-
+import Ionicons from "@expo/vector-icons/Ionicons";
 export default function App() {
   return (
     <SafeAreaView style={styles.safest}>
@@ -84,14 +84,49 @@ export default function App() {
               borderBottomLeftRadius: 20,
               borderBottomRightRadius: 20,
               flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
+              // justifyContent: "center",
+              // alignItems: "center",
             }}
           >
-            <View style={styles.niittailbar}>
-              <Text style={styles.baruundood}>
-                Believe in Magic&Win {"\n"} хөтөлбөрийн тухай
+            <View style={{}}>
+              <Text
+                style={{
+                  fontWeight: "100",
+                  fontSize: 13,
+
+                  marginLeft: 20,
+                }}
+              >
+                Believe in Magic&Win{"\n"}хөтөлбөрийн тухай
               </Text>
+              <View
+                style={{
+                  backgroundColor: `#1e90ff`,
+                  width: 55,
+                  height: 15,
+                  marginLeft: 290,
+                  marginTop: -25,
+                  borderRadius: 2,
+                }}
+              >
+                <Ionicons
+                  name="md-share-social-outline"
+                  size={13}
+                  color="white"
+                  style={{ marginLeft: 5 }}
+                />
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 8,
+                    marginTop: -15,
+                    fontWeight: "200",
+                    marginLeft: 23,
+                  }}
+                >
+                  Share
+                </Text>
+              </View>
             </View>
           </View>
         </View>
@@ -99,7 +134,7 @@ export default function App() {
         <View
           style={{
             width: 360,
-            height: 200,
+            height: 190,
             backgroundColor: "white",
             marginLeft: 27,
             marginTop: 20,
@@ -127,21 +162,49 @@ export default function App() {
               borderBottomLeftRadius: 20,
               borderBottomRightRadius: 20,
               flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
+              // justifyContent: "center",
+              // alignItems: "center",
             }}
           >
             <View style={styles.niittailbar}>
-              <Text style={styles.zuuntailbar}>
-                Believe in Magic&Win {"\n"} хөтөлбөрт оролцох заавар
+              <Text style={{ fontWeight: "100", fontSize: 13, marginLeft: 20 }}>
+                Believe in Magic&Win{"\n"}хөтөлбөрт оролцох заавар
               </Text>
+              <View
+                style={{
+                  backgroundColor: `#1e90ff`,
+                  width: 55,
+                  height: 15,
+                  marginLeft: 290,
+                  marginTop: -25,
+                  borderRadius: 2,
+                }}
+              >
+                <Ionicons
+                  name="md-share-social-outline"
+                  size={13}
+                  color="white"
+                  style={{ marginLeft: 5 }}
+                />
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 8,
+                    marginTop: -15,
+                    fontWeight: "200",
+                    marginLeft: 23,
+                  }}
+                >
+                  Share
+                </Text>
+              </View>
             </View>
           </View>
         </View>
         <View
           style={{
             width: 360,
-            height: 200,
+            height: 190,
             backgroundColor: "white",
             marginLeft: 27,
             marginTop: 20,
@@ -169,14 +232,42 @@ export default function App() {
               borderBottomLeftRadius: 20,
               borderBottomRightRadius: 20,
               flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
+              // justifyContent: "center",
+              // alignItems: "center",
             }}
           >
             <View style={styles.niittailbar}>
-              <Text style={styles.zuuntailbar}>
-                Coca-Cola {"\n"} шинэ савалгаа
+              <Text style={{ fontWeight: "100", fontSize: 13, marginLeft: 20 }}>
+                Coca-Cola{"\n"}шинэ савалгаа
               </Text>
+              <View
+                style={{
+                  backgroundColor: `#1e90ff`,
+                  width: 55,
+                  height: 15,
+                  marginLeft: 290,
+                  marginTop: -25,
+                  borderRadius: 2,
+                }}
+              >
+                <Ionicons
+                  name="md-share-social-outline"
+                  size={13}
+                  color="white"
+                  style={{ marginLeft: 5 }}
+                />
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 8,
+                    marginTop: -15,
+                    fontWeight: "200",
+                    marginLeft: 23,
+                  }}
+                >
+                  Share
+                </Text>
+              </View>
             </View>
           </View>
         </View>
@@ -184,7 +275,7 @@ export default function App() {
         <View
           style={{
             width: 360,
-            height: 200,
+            height: 190,
             backgroundColor: "white",
             marginLeft: 27,
             marginTop: 20,
@@ -212,12 +303,49 @@ export default function App() {
               borderBottomLeftRadius: 20,
               borderBottomRightRadius: 20,
               flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
+              // justifyContent: "center",
+              // alignItems: "center",
             }}
           >
             <View style={styles.niittailbar}>
-              <Text style={styles.zuuntailbar}>Real Magic</Text>
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 13,
+                  fontWeight: "100",
+                  marginTop: 10,
+                }}
+              >
+                Real Magic
+              </Text>
+              <View
+                style={{
+                  backgroundColor: `#1e90ff`,
+                  width: 55,
+                  height: 15,
+                  marginLeft: 290,
+                  marginTop: -18,
+                  borderRadius: 2,
+                }}
+              >
+                <Ionicons
+                  name="md-share-social-outline"
+                  size={13}
+                  color="white"
+                  style={{ marginLeft: 5 }}
+                />
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 8,
+                    marginTop: -15,
+                    fontWeight: "200",
+                    marginLeft: 23,
+                  }}
+                >
+                  Share
+                </Text>
+              </View>
             </View>
           </View>
         </View>
@@ -259,18 +387,8 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 
-  zuuntailbar: {
-    fontSize: 13,
-    fontWeight: "100",
-  },
-  baruuntailbar: {
-    fontSize: 13,
-    fontWeight: "100",
-  },
-
-  niittailbar: {},
-  baruundood: {
-    fontWeight: "100",
-    fontSize: 13,
-  },
+  // zuuntailbar: {
+  //   fontSize: 13,
+  //   fontWeight: "100",
+  // },
 });
