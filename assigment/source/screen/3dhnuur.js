@@ -10,7 +10,7 @@ import {
 import React from "react";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
-
+import Ionicons from "@expo/vector-icons/Ionicons";
 export default function App() {
   return (
     <SafeAreaView style={styles.safest}>
@@ -31,7 +31,7 @@ export default function App() {
         </View>
 
         <View style={styles.hutulburugview}>
-          <Text style={styles.hutulburug}>Хөтөлбөр</Text>
+          <Text style={styles.hutulburug}>Нэмэлт оноо</Text>
         </View>
 
         <View
@@ -73,7 +73,7 @@ export default function App() {
               borderTopLeftRadius: 15,
               borderTopRightRadius: 15,
             }}
-            source={require("./source/images/sprite.png")}
+            source={require("./source/images/nemelt1.png")}
           ></Image>
 
           <View
@@ -84,15 +84,49 @@ export default function App() {
               borderBottomLeftRadius: 20,
               borderBottomRightRadius: 20,
               flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
+              // justifyContent: "center",
+              // alignItems: "center",
             }}
           >
-            <View style={styles.niittailbar}>
-              <Text style={styles.spritez}>Sprite x M Music</Text>
-              <Text style={styles.spriteb}>
-                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+            <View style={{}}>
+              <Text
+                style={{
+                  fontWeight: "100",
+                  fontSize: 13,
+
+                  marginLeft: 20,
+                }}
+              >
+                Believe in Magic&Win{"\n"}хөтөлбөрийн тухай
               </Text>
+              <View
+                style={{
+                  backgroundColor: `#1e90ff`,
+                  width: 55,
+                  height: 15,
+                  marginLeft: 290,
+                  marginTop: -25,
+                  borderRadius: 2,
+                }}
+              >
+                <Ionicons
+                  name="md-share-social-outline"
+                  size={13}
+                  color="white"
+                  style={{ marginLeft: 5 }}
+                />
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 8,
+                    marginTop: -15,
+                    fontWeight: "200",
+                    marginLeft: 23,
+                  }}
+                >
+                  Share
+                </Text>
+              </View>
             </View>
           </View>
         </View>
@@ -100,7 +134,7 @@ export default function App() {
         <View
           style={{
             width: 360,
-            height: 200,
+            height: 190,
             backgroundColor: "white",
             marginLeft: 27,
             marginTop: 20,
@@ -118,7 +152,7 @@ export default function App() {
               borderTopLeftRadius: 15,
               borderTopRightRadius: 15,
             }}
-            source={require("./source/images/punch.png")}
+            source={require("./source/images/nemelt2.png")}
           ></Image>
           <View
             style={{
@@ -128,18 +162,190 @@ export default function App() {
               borderBottomLeftRadius: 20,
               borderBottomRightRadius: 20,
               flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
+              // justifyContent: "center",
+              // alignItems: "center",
             }}
           >
             <View style={styles.niittailbar}>
-              <Text style={styles.zuuntailbar}>
-                Хад жимсний амттай шинэ{"\n"} амт худалдаанд гарлаа.
+              <Text style={{ fontWeight: "100", fontSize: 13, marginLeft: 20 }}>
+                Believe in Magic&Win{"\n"}хөтөлбөрт оролцох заавар
               </Text>
+              <View
+                style={{
+                  backgroundColor: `#1e90ff`,
+                  width: 55,
+                  height: 15,
+                  marginLeft: 290,
+                  marginTop: -25,
+                  borderRadius: 2,
+                }}
+              >
+                <Ionicons
+                  name="md-share-social-outline"
+                  size={13}
+                  color="white"
+                  style={{ marginLeft: 5 }}
+                />
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 8,
+                    marginTop: -15,
+                    fontWeight: "200",
+                    marginLeft: 23,
+                  }}
+                >
+                  Share
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={{
+            width: 360,
+            height: 190,
+            backgroundColor: "white",
+            marginLeft: 27,
+            marginTop: 20,
+            borderBottomRightRadius: 15,
+            borderBottomLeftRadius: 15,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+            elevation: 10,
+          }}
+        >
+          <Image
+            style={{
+              width: 360,
+              height: 150,
+              borderTopLeftRadius: 15,
+              borderTopRightRadius: 15,
+            }}
+            source={require("./source/images/nemelt3.png")}
+          ></Image>
+          <View
+            style={{
+              width: "100%",
+              height: 40,
+              backgroundColor: "white",
+              borderBottomLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              flexDirection: "row",
+              // justifyContent: "center",
+              // alignItems: "center",
+            }}
+          >
+            <View style={styles.niittailbar}>
+              <Text style={{ fontWeight: "100", fontSize: 13, marginLeft: 20 }}>
+                Coca-Cola{"\n"}шинэ савалгаа
+              </Text>
+              <View
+                style={{
+                  backgroundColor: `#1e90ff`,
+                  width: 55,
+                  height: 15,
+                  marginLeft: 290,
+                  marginTop: -25,
+                  borderRadius: 2,
+                }}
+              >
+                <Ionicons
+                  name="md-share-social-outline"
+                  size={13}
+                  color="white"
+                  style={{ marginLeft: 5 }}
+                />
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 8,
+                    marginTop: -15,
+                    fontWeight: "200",
+                    marginLeft: 23,
+                  }}
+                >
+                  Share
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
 
-              <Text style={styles.baruuntailbar}>
-                Хөтөлбөрийн хугацаа {"\n"}2023-03-15 - 2023-06-15
+        <View
+          style={{
+            width: 360,
+            height: 190,
+            backgroundColor: "white",
+            marginLeft: 27,
+            marginTop: 20,
+            borderBottomRightRadius: 15,
+            borderBottomLeftRadius: 15,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+            elevation: 10,
+          }}
+        >
+          <Image
+            style={{
+              width: 360,
+              height: 150,
+              borderTopLeftRadius: 15,
+              borderTopRightRadius: 15,
+            }}
+            source={require("./source/images/nemelt4.png")}
+          ></Image>
+          <View
+            style={{
+              width: "100%",
+              height: 40,
+              backgroundColor: "white",
+              borderBottomLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              flexDirection: "row",
+              // justifyContent: "center",
+              // alignItems: "center",
+            }}
+          >
+            <View style={styles.niittailbar}>
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 13,
+                  fontWeight: "100",
+                  marginTop: 10,
+                }}
+              >
+                Real Magic
               </Text>
+              <View
+                style={{
+                  backgroundColor: `#1e90ff`,
+                  width: 55,
+                  height: 15,
+                  marginLeft: 290,
+                  marginTop: -18,
+                  borderRadius: 2,
+                }}
+              >
+                <Ionicons
+                  name="md-share-social-outline"
+                  size={13}
+                  color="white"
+                  style={{ marginLeft: 5 }}
+                />
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 8,
+                    marginTop: -15,
+                    fontWeight: "200",
+                    marginLeft: 23,
+                  }}
+                >
+                  Share
+                </Text>
+              </View>
             </View>
           </View>
         </View>
@@ -181,32 +387,8 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 
-  zuuntailbar: {
-    fontSize: 13,
-    fontWeight: "100",
-    textAlign: "left",
-  },
-  baruuntailbar: {
-    fontSize: 13,
-    fontWeight: "100",
-  },
-
-  niittailbar: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-
-  spriteb: {
-    textAlign: "left",
-    fontWeight: "100",
-    fontSize: 13,
-    paddingLeft: 70,
-  },
-
-  spritez: {
-    textAlign: "right",
-    fontWeight: "100",
-    fontSize: 13,
-  },
+  // zuuntailbar: {
+  //   fontSize: 13,
+  //   fontWeight: "100",
+  // },
 });
