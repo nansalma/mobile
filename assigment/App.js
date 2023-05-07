@@ -46,17 +46,48 @@ export default function App() {
               borderRadius: 15,
               backgroundColor: "white",
               marginLeft: 20,
+              justifyContent: "center",
             }}
           >
             <Image
               style={{
-                width: 60,
-                height: 60,
+                width: 40,
+                height: 40,
                 borderTopLeftRadius: 15,
                 borderTopRightRadius: 15,
+                marginLeft: 20,
               }}
               source={require("./source/images/logo.png")}
             ></Image>
+
+            <Text
+              style={{
+                fontWeight: "100",
+                width: 310,
+                backgroundColor: "grey",
+                marginLeft: 80,
+                marginTop: -30,
+                textAlign: "center",
+                fontSize: 10,
+              }}
+            >
+              Sprite x M Music
+            </Text>
+            <Text
+              style={{
+                fontWeight: "100",
+                backgroundColor: "plum",
+                height: 70,
+                width: 300,
+                fontSize: 10,
+                marginLeft: 80,
+                textAlign: "center",
+              }}
+            >
+              "Sprite No Sugar ундааны бөглөөн доторх кодыг{"\n"}"MMusic"
+              аппликейшны промо код хэсэгт оруулан 7{"\n"}хоногийн үйлчилгээний
+              эрх аваарай.
+            </Text>
           </View>
         </View>
       </ScrollView>
