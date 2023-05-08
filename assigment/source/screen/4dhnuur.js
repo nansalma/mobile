@@ -34,7 +34,7 @@ export default function nuur4({ navigation }) {
           style={{
             width: 500,
             height: 120,
-            backgroundColor: "plum",
+            // backgroundColor: "plum",
             justifyContent: "center",
           }}
         >
@@ -46,27 +46,27 @@ export default function nuur4({ navigation }) {
               borderRadius: 15,
               backgroundColor: "white",
               marginLeft: 20,
-              justifyContent: "center",
             }}
           >
-            <Image
-              style={{
-                width: 40,
-                height: 40,
-                borderTopLeftRadius: 15,
-                borderTopRightRadius: 15,
-                marginLeft: 20,
-              }}
-              source={require("../images/logo.png")}
-            ></Image>
-
+            <View style={{ justifyContent: "center", marginLeft: 20 }}>
+              <Image
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderTopLeftRadius: 15,
+                  borderTopRightRadius: 15,
+                  marginTop: 20,
+                }}
+                source={require("../assigment/source/images/logo.png")}
+              ></Image>
+            </View>
             <Text
               style={{
                 fontWeight: "100",
                 width: 310,
-                backgroundColor: "grey",
+                // backgroundColor: "grey",
                 marginLeft: 80,
-                marginTop: -30,
+                marginTop: -50,
                 textAlign: "center",
                 fontSize: 10,
               }}
@@ -76,7 +76,7 @@ export default function nuur4({ navigation }) {
             <Text
               style={{
                 fontWeight: "100",
-                backgroundColor: "plum",
+                // backgroundColor: "plum",
                 height: 70,
                 width: 300,
                 fontSize: 10,
@@ -87,6 +87,9 @@ export default function nuur4({ navigation }) {
               "Sprite No Sugar ундааны бөглөөн доторх кодыг{"\n"}"MMusic"
               аппликейшны промо код хэсэгт оруулан 7{"\n"}хоногийн үйлчилгээний
               эрх аваарай.
+            </Text>
+            <Text style={{ fontWeight: "100", fontSize: 13 }}>
+              2023-03-28 11:14:29
             </Text>
           </View>
         </View>
