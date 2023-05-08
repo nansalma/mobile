@@ -12,7 +12,7 @@ import {
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Feather from "@expo/vector-icons/Feather";
-export default function App() {
+export default function Nuur({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scview}>
@@ -47,11 +47,11 @@ export default function App() {
           <View style={styles.zuragniiview}>
             <Image
               style={styles.zurag}
-              source={require("./source/images/zurag1.png")}
+              source={require("../../source/images/zurag1.png")}
             />
             <Image
               style={styles.zurag}
-              source={require("./source/images/zurag1.png")}
+              source={require("../../source/images/zurag1.png")}
             />
           </View>
         </ScrollView>
@@ -79,7 +79,7 @@ export default function App() {
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
             }}
-            source={require("./source/images/sprite.png")}
+            source={require("../../source/images/sprite.png")}
           ></Image>
           <View style={styles.niittailbar}>
             <Text style={styles.zuuntailbar}>Sprite x M Music</Text>
@@ -95,7 +95,7 @@ export default function App() {
         <View style={styles.belegview}>
           <Image
             style={styles.belegzurag}
-            source={require("./source/images/beleg.png")}
+            source={require("../../source/images/beleg.png")}
           />
           <View style={styles.chimeglelview}>
             <Text style={styles.shinejilug}>Шинэ жилийн{"\n"} чимэглэл</Text>

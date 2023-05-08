@@ -11,7 +11,7 @@ import React from "react";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Ionicons from "@expo/vector-icons/Ionicons";
-export default function App() {
+export default function nuur3({ navigation }) {
   return (
     <SafeAreaView style={styles.safest}>
       <ScrollView>
@@ -73,7 +73,7 @@ export default function App() {
               borderTopLeftRadius: 15,
               borderTopRightRadius: 15,
             }}
-            source={require("./source/images/nemelt1.png")}
+            source={require("../../source/images/nemelt1.png")}
           ></Image>
 
           <View
@@ -152,7 +152,7 @@ export default function App() {
               borderTopLeftRadius: 15,
               borderTopRightRadius: 15,
             }}
-            source={require("./source/images/nemelt2.png")}
+            source={require("../../source/images/nemelt2.png")}
           ></Image>
           <View
             style={{
@@ -222,7 +222,7 @@ export default function App() {
               borderTopLeftRadius: 15,
               borderTopRightRadius: 15,
             }}
-            source={require("./source/images/nemelt3.png")}
+            source={require("../../source/images/nemelt3.png")}
           ></Image>
           <View
             style={{
@@ -293,7 +293,7 @@ export default function App() {
               borderTopLeftRadius: 15,
               borderTopRightRadius: 15,
             }}
-            source={require("./source/images/nemelt4.png")}
+            source={require("../../source/images/nemelt4.png")}
           ></Image>
           <View
             style={{

@@ -11,7 +11,7 @@ import React from "react";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
-export default function App() {
+export default function Nuur2({ navigation }) {
   return (
     <SafeAreaView style={styles.safest}>
       <ScrollView>
@@ -73,7 +73,7 @@ export default function App() {
               borderTopLeftRadius: 15,
               borderTopRightRadius: 15,
             }}
-            source={require("./source/images/sprite.png")}
+            source={require("../images/sprite.png")}
           ></Image>
 
           <View
@@ -118,7 +118,7 @@ export default function App() {
               borderTopLeftRadius: 15,
               borderTopRightRadius: 15,
             }}
-            source={require("./source/images/punch.png")}
+            source={require("../../../assigment/source/images/punch.png")}
           ></Image>
           <View
             style={{
