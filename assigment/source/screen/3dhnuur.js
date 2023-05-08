@@ -29,11 +29,9 @@ export default function nuur3({ navigation }) {
             style={{ marginTop: 50, padding: 25 }}
           />
         </View>
-
         <View style={styles.hutulburugview}>
           <Text style={styles.hutulburug}>Нэмэлт оноо</Text>
         </View>
-
         <View
           style={{
             flexDirection: "row",
@@ -51,7 +49,6 @@ export default function nuur3({ navigation }) {
             }}
           />
         </View>
-
         <View
           style={{
             width: 360,
@@ -130,7 +127,6 @@ export default function nuur3({ navigation }) {
             </View>
           </View>
         </View>
-
         <View
           style={{
             width: 360,
@@ -271,7 +267,6 @@ export default function nuur3({ navigation }) {
             </View>
           </View>
         </View>
-
         <View
           style={{
             width: 360,
@@ -349,9 +344,7 @@ export default function nuur3({ navigation }) {
             </View>
           </View>
         </View>
-        <View
-          style={{ height: 220, backgroundColor: "white", marginTop: 20 }}
-        ></View>
+        <View style={{ height: 20 }}></View>
       </ScrollView>
     </SafeAreaView>
   );

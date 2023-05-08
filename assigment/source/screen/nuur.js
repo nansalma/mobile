@@ -104,6 +104,7 @@ export default function Nuur({ navigation }) {
             <SimpleLineIcons name="basket" size={20} color="black" />
           </View>
         </View>
+        <View style={{ height: 20 }}></View>
       </ScrollView>
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -207,6 +208,7 @@ const styles = StyleSheet.create({
     color: "black",
     marginLeft: 20,
     fontWeight: "100",
+    marginTop: 8,
   },
 
   belegview: {
@@ -215,6 +217,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     marginLeft: 20,
     borderRadius: 15,
+
     alignItems: "center",
     elevation: 10,
   },

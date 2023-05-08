@@ -143,9 +143,7 @@ export default function Nuur2({ navigation }) {
             </View>
           </View>
         </View>
-        <View
-          style={{ height: 220, backgroundColor: "white", marginTop: 20 }}
-        ></View>
+        <View style={{ height: 220 }}></View>
       </ScrollView>
     </SafeAreaView>
   );

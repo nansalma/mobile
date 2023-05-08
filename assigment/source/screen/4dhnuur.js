@@ -57,7 +57,7 @@ export default function nuur4({ navigation }) {
                   borderTopRightRadius: 15,
                   marginTop: 20,
                 }}
-                source={require("../assigment/source/images/logo.png")}
+                source={require("../images/logo.png")}
               ></Image>
             </View>
             <Text
@@ -87,9 +87,6 @@ export default function nuur4({ navigation }) {
               "Sprite No Sugar ундааны бөглөөн доторх кодыг{"\n"}"MMusic"
               аппликейшны промо код хэсэгт оруулан 7{"\n"}хоногийн үйлчилгээний
               эрх аваарай.
-            </Text>
-            <Text style={{ fontWeight: "100", fontSize: 13 }}>
-              2023-03-28 11:14:29
             </Text>
           </View>
         </View>
