@@ -15,6 +15,21 @@ export default function Nuur2({ navigation }) {
   return (
     <SafeAreaView style={styles.safest}>
       <ScrollView>
+        <View style={styles.header}>
+          <SimpleLineIcons
+            name="basket"
+            size={32}
+            color="white"
+            style={{ marginLeft: 300, marginTop: 50 }}
+          />
+          <AntDesign
+            name="gift"
+            size={32}
+            color="white"
+            style={{ marginTop: 50, padding: 25 }}
+          />
+        </View>
+
         <View style={styles.hutulburugview}>
           <Text style={styles.hutulburug}>Хөтөлбөр</Text>
         </View>
