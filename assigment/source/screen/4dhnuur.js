@@ -97,11 +97,4 @@ export default function nuur4({ navigation }) {
 
 const styles = StyleSheet.create({
   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  header: {
-    height: 130,
-    backgroundColor: "red",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-  },
 });
