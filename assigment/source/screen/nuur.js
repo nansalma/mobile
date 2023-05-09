@@ -10,39 +10,13 @@ import {
   Image,
 } from "react-native";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
-import AntDesign from "@expo/vector-icons/AntDesign";
-import Feather from "@expo/vector-icons/Feather";
+import Header from "../../source/screen/header";
+
 export default function Nuur({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scview}>
-        <View style={styles.header}>
-          <SimpleLineIcons
-            name="basket"
-            size={30}
-            color="white"
-            style={{ marginLeft: 300, marginTop: 50 }}
-          />
-          <AntDesign
-            name="gift"
-            size={30}
-            color="white"
-            style={{ marginTop: 50, padding: 25 }}
-          />
-        </View>
-
-        <View style={styles.code}>
-          <TextInput
-            style={styles.input}
-            placeholder="Код оруулах"
-            onChangeText={onChangeNumber}
-            keyboardType="default"
-            maxLength={9}
-          />
-          <View style={styles.isend}>
-            <Feather name="send" size={32} color="red" />
-          </View>
-        </View>
+        <Header />
         <ScrollView horizontal={true}>
           <View style={styles.zuragniiview}>
             <Image
