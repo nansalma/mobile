@@ -10,6 +10,7 @@ import {
   Image,
 } from "react-native";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
+
 import Header from "../../source/screen/header";
 
 export default function Nuur({ navigation }) {

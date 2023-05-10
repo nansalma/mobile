@@ -8,6 +8,7 @@ import {
   Image,
 } from "react-native";
 import React from "react";
+
 import Header from "../../source/screen/header";
 
 export default function nuur4({ navigation }) {

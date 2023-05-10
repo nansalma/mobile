@@ -36,13 +36,13 @@ function MyTabs() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
-            if (route.name === "Mplus") {
+            if (route.name === "Home") {
               iconName = focused ? "home" : "home-outline";
-            } else if (route.name === "Хайх") {
+            } else if (route.name === "Хөтөлбөр") {
               iconName = focused ? "newspaper-outline" : "newspaper-outline";
-            } else if (route.name === "Миний сан") {
+            } else if (route.name === "Нэмэлт оноо") {
               iconName = focused ? "settings" : "settings-outline";
-            } else if (route.name === "Message") {
+            } else if (route.name === "Мэдээ") {
               iconName = focused
                 ? "chatbox-ellipses-outline"
                 : "chatbox-ellipses-outline";
@@ -54,31 +54,31 @@ function MyTabs() {
             height: 60,
             paddingHorizontal: 5,
             paddingTop: 0,
-            backgroundColor: "#4D4D4D",
+            backgroundColor: "white",
             position: "absolute",
             borderTopWidth: 0,
           },
-          tabBarActiveTintColor: "blue",
+          tabBarActiveTintColor: `#a9a9a9`,
           tabBarInactiveTintColor: "#dcdcdc",
         })}
       >
         <Tab.Screen
-          name="Mplus"
+          name="Home"
           component={HomeStackScreen}
           options={{ headerShown: false }}
         />
         <Tab.Screen
-          name="Хайх"
+          name="Хөтөлбөр"
           component={nuur1}
           options={{ headerShown: false }}
         />
         <Tab.Screen
-          name="Миний сан"
+          name="Нэмэлт оноо"
           component={nuur2}
           options={{ headerShown: false }}
         />
         <Tab.Screen
-          name="Message"
+          name="Мэдээ"
           component={nuur3}
           options={{ headerShown: false }}
         />

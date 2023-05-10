@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import React from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
+
 import Header from "../../source/screen/header";
 
 export default function nuur3({ navigation }) {
@@ -332,7 +333,7 @@ export default function nuur3({ navigation }) {
             </View>
           </View>
         </View>
-        <View style={{ height: 20 }}></View>
+        <View style={{ height: 200 }}></View>
       </ScrollView>
     </SafeAreaView>
   );
